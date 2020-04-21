@@ -1,0 +1,8 @@
+name: SureliPERM
+version: 0.1.0-SNAPSHOT
+main: com.infumia.t3sl4.sureliperm.SureliPERM
+api-version: 1.13
+authors: [Infumia]
+commands:
+  sureliperm:
+    description: 'Zamanlı yetki verme komutu!'

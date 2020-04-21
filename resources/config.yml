@@ -1,0 +1,47 @@
+Komutlar:
+  Admin:
+    - '&c&l&m------------&8[&eSüreliPERM&8]&c&l&m------------'
+    - '&6/sureliperm ver &8<&bOyuncu&8> <&bPerm&8> <&bSüre&8> &a&l> &eOyuncuya Süreli Yetki Verir!'
+    - '&6/sureliperm sorgu &8<&bOyuncu&8> &a&l> &eOyuncunun Yetki Süresini Sorgular!'
+    - '&6/sureliperm zekle &8<&bOyuncu&8> <&bPerm&8> <&bSüre&8> &a&l> &eOyuncunun Yetki Süresini Arttırır.'
+    - '&6/sureliperm zsil &8<&bOyuncu&8> <&bPerm&8> <&bSüre&8> &a&l> &eOyuncunun Yetki Süresini Azaltır.'
+    - '&6/sureliperm sil &8<&bOyuncu&8> <&bPerm&8> &a&l> &eOyuncunun Süreli Yetkisini Siler.'
+    - '&6/sureliperm reload &a&l> &eEklentiyi Yeniler'
+    - '&r   '
+    - '&eZaman Formatları: &eDakika: &cd&7,&eSaat: &cs&7,&eGün: &cg&7,&eHafta: &ch&7,&eAy: &ca'
+    - '&c&l&m------------&8[&eSüreliPERM&8]&c&l&m------------'
+  Oyuncu:
+    - '&c&l&m------------&8[&eSüreliPERM&8]&c&l&m------------'
+    - '&6/sureliperm sorgu &8<&bOyuncu&8> &a&l> &eOyuncunun Yetki Süresini Sorgular!'
+    - '&c&l&m------------&8[&eSüreliPERM&8]&c&l&m------------'
+Yetki:
+  Verme: 'manuaddp %player% %perm%'
+  Alma: 'manudelp %player% %perm%'
+Mesajlar:
+  Yenilendi: "&e&lSüreliPERM &8&l» &aEklenti Yenilendi!"
+  Verildi: "&e&lSüreliPERM &8&l» &eBaşarıyla &c%player% &eAdlı Oyuncuya &c%perm% &eYetkisi &c%sure% &eSüreliğine Verildi!"
+  Silindi: "&e&lSüreliPERM &8&l» &eBaşarıyla &c%player% &eAdlı Oyuncunun &c%perm% &eYetkisi Silindi!"
+  Zaman-Silindi: "&e&lSüreliPERM &8&l»&eBaşarıyla &c%player% &eAdlı Oyuncunun &c%perm% &eYetkisinden &c%zaman% &eSüre Silindi!"
+  Zaman-Eklendi: "&e&lSüreliPERM &8&l»&eBaşarıyla &c%player% &eAdlı Oyuncunun &c%perm% &eYetkisine &c%zaman% &eSüre Eklendi!"
+Menü:
+  Sonraki:
+    material: 'PAPER'
+    amount: 1
+    name: '&eSonraki Sayfa'
+    enchants:
+      - 'damage all:2'
+  Onceki:
+    material: 'PAPER'
+    amount: 1
+    name: '&eÖnceki Sayfa'
+    enchants:
+      - 'damage all:2'
+  Perm:
+    material: 'NAME_TAG'
+    amount: 1
+    name: '&c%perm%'
+    lore:
+      - '&eBitiş Zamanı:'
+      - '&r  '
+      - '&a%zaman%'
+    glow: true
