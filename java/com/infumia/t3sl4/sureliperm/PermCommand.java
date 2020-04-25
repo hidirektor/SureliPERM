@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.HoverEvent;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -26,7 +30,14 @@ public class PermCommand implements CommandExecutor {
 
    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
       if (args.length == 0) {
-         this.sendMessage(sender, this.plugin.getConfig().getStringList("Komutlar." + (sender.isOp() ? "Admin" : "Oyuncu")));
+         TextComponent msg = new TextComponent("§e§lAuthor §7|| §e§lYapımcı");
+         msg.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("§7Eklenti Yapımcısı:\n   §8§l» §eSYN_T3SL4 \n   §8§l» §7Discord: §eHalil#4439").create()));
+         if (sender instanceof Player) {
+            this.sendMessage(sender, this.plugin.getConfig().getStringList("Komutlar." + (sender.isOp() ? "Admin" : "Oyuncu")));
+            sender.spigot().sendMessage(msg);
+         } else {
+            this.sendMessage(sender, this.plugin.getConfig().getStringList("Komutlar." + (sender.isOp() ? "Admin" : "Oyuncu")));
+         }
       } else if (args[0].equalsIgnoreCase("reload")) {
          if (!sender.isOp()) {
             return true;
@@ -34,7 +45,7 @@ public class PermCommand implements CommandExecutor {
 
          this.plugin.getConfig().reload();
          this.plugin.getData().reload();
-         this.sendMessage(sender, this.plugin.getConfig().getString("Mesajlar.Yenilendi", "&6&lTimelyPerms > &aEklenti yenilendi!"));
+         this.sendMessage(sender, this.plugin.getConfig().getString("Mesajlar.Yenilendi", "&6&lSureliPERM > &aEklenti yenilendi!"));
       } else if (args[0].equalsIgnoreCase("sorgu")) {
          if (!(sender instanceof Player)) {
             return true;

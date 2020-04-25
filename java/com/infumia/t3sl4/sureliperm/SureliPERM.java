@@ -18,6 +18,13 @@ public final class SureliPERM extends JavaPlugin {
       this.getCommand("sureliperm").setExecutor(new PermCommand(this));
       new ListGui(this);
       (new PermRunnable(this)).runTaskTimer(this, 0L, 600L);
+      Bukkit.getConsoleSender().sendMessage("   ");
+      Bukkit.getConsoleSender().sendMessage("  ___            __                       _         ");
+      Bukkit.getConsoleSender().sendMessage(" |_ _|  _ __    / _|  _   _   _ __ ___   (_)   __ _ ");
+      Bukkit.getConsoleSender().sendMessage("  | |  | '_ \\  | |_  | | | | | '_ ` _ \\  | |  / _` |");
+      Bukkit.getConsoleSender().sendMessage("  | |  | | | | |  _| | |_| | | | | | | | | | | (_| |");
+      Bukkit.getConsoleSender().sendMessage(" |___| |_| |_| |_|    \\__,_| |_| |_| |_| |_|  \\__,_|");
+      Bukkit.getConsoleSender().sendMessage("    ");
    }
 
    public void onDisable() {
